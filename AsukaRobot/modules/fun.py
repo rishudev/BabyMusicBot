@@ -7,12 +7,43 @@ from AsukaRobot import dispatcher
 from AsukaRobot.modules.disable import DisableAbleCommandHandler
 from AsukaRobot.modules.helper_funcs.chat_status import is_user_admin
 from AsukaRobot.modules.helper_funcs.extraction import extract_user
-from telegram import ChatPermissions, ParseMode, Update
+from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ChatPermissions, ParseMode, Update)
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
 GIF_ID = "CgACAgQAAxkBAAILHWBPN8dL8NvxZ9tUfr3_4SdPGqgjAAJeAgACQQrNUlM24z1ISCsTHgQ"
 
+henbuttons = [
+    [
+                        InlineKeyboardButton(
+                             text="Uncensored Hentai",
+                             url="https://t.me/Uncensored_Hemtai"),
+                    ],                
+                   [ 
+                       InlineKeyboardButton(
+                             text="Pornhwa",
+                             url="https://t.me/PornhwaHeaven"),                  
+                       InlineKeyboardButton(
+                             text="Chat",
+                             callback_data="https://t.me/Hentai_Chat_Hanime"),
+                   ],
+    ]
+
+anibuttons = [
+    [
+                        InlineKeyboardButton(
+                             text="Anime Cruise",
+                             url="https://t.me/Anime_Cruise"),
+                    ],                
+                   [ 
+                       InlineKeyboardButton(
+                             text="Index",
+                             url="https://t.me/Cruise_Index"),                  
+                       InlineKeyboardButton(
+                             text="Chat",
+                             callback_data="https://t.me/Anime_Chat_Kaizuryu"),
+                   ],
+    ]
 
 @run_async
 def runs(update: Update, context: CallbackContext):
@@ -217,13 +248,17 @@ def sex(update: Update, context: CallbackContext):
 @run_async
 def hemtai(update: Update, context: CallbackContext):
     reply_photo = update.effective_message.reply_to_message.reply_photo if update.effective_message.reply_to_message else update.effective_message.reply_photo
-    reply_photo(photo="https://telegra.ph/file/2466b0d2e524b8d47a73d.jpg", caption=f"• [Uncensored Hentai](https://t.me/+S6Kq1YC5bxkwZjgx) \n• [Pornhwas](https://t.me/PornhwaHeaven) \n• [Hentai Chat](https://t.me/Hentai_Chat_Hanime)", parse_mode=ParseMode.MARKDOWN,)
+    reply_photo(photo="https://telegra.ph/file/a01a331e69ab69158482e.jpg", caption=f"• Heyy Pervert!!! Join Below •", 
+    reply_markup=InlineKeyboardMarkup(henbuttons),
+    parse_mode=ParseMode.MARKDOWN,)
 
 @run_async
 def animec(update: Update, context: CallbackContext):
     reply_photo = update.effective_message.reply_to_message.reply_photo if update.effective_message.reply_to_message else update.effective_message.reply_photo
-    reply_photo(photo="https://telegra.ph/file/941e6d601c37c3ddf2925.jpg", caption=f"• Anime Cruise \n\n• [Animes](https://t.me/Anime_Cruise) \n• [Index](https://t.me/Cruise_Index) \n• [Chat](https://t.me/Anime_Chat_XKaizuryu)", parse_mode=ParseMode.MARKDOWN,)
-
+    reply_photo(photo="https://telegra.ph/file/6deba46d5cc608ba3a59f.jpg", 
+    reply_markup=InlineKeyboardMarkup(anibuttons),
+    parse_mode=ParseMode.MARKDOWN,)
+    
 normiefont = [
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
     'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
