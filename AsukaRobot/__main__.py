@@ -303,23 +303,6 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
-            update.effective_message.reply_photo(
-                     photo="https://telegra.ph/file/e29b543a507e0bc79e722.jpg",
-                     caption=ACRUISE,
-                     parse_mode=ParseMode.HTML,
-                     reply_markup=InlineKeyboardMarkup(
-                [
-                  [
-                       InlineKeyboardButton(
-                             text="Join",
-                             url="t.me/Anime_Cruise"),
-                       InlineKeyboardButton(
-                             text="Index",
-                             url="t.me/Cruise_Index/5")
-                     ]
-                ]
-            ),
-        )
 
     else:
         first = update.effective_user.full_name
