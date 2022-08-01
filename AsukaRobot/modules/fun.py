@@ -25,7 +25,7 @@ henbuttons = [
                              url="https://t.me/PornhwaHeaven"),                  
                        InlineKeyboardButton(
                              text="Chat",
-                             callback_data="https://t.me/Hentai_Chat_Hanime"),
+                             url="https://t.me/Hentai_Chat_Hanime"),
                    ],
     ]
 
@@ -41,7 +41,7 @@ anibuttons = [
                              url="https://t.me/Cruise_Index"),                  
                        InlineKeyboardButton(
                              text="Chat",
-                             callback_data="https://t.me/Anime_Chat_Kaizuryu"),
+                             url="https://t.me/Anime_Chat_Kaizuryu"),
                    ],
     ]
 
